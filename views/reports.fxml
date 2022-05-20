@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.reports_controller">
+   <children>
+      <ImageView fitHeight="32.0" fitWidth="125.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wgu_logo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="15.0" prefHeight="30.0" prefWidth="130.0" text="Reports">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_return_main" layoutX="676.0" layoutY="23.0" mnemonicParsing="false" onAction="#handler_button_return_main" text="Return to Main Menu" />
+      <Label layoutX="331.0" layoutY="27.0" text="Current user:" />
+      <Label fx:id="label_current_user" layoutX="407.0" layoutY="27.0" prefHeight="18.0" prefWidth="82.0" text="User" />
+      <TabPane layoutX="14.0" layoutY="55.0" prefHeight="460.0" prefWidth="796.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Appointment type total by Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="text_report_1" prefHeight="435.0" prefWidth="796.0">
+                           <font>
+                              <Font name="Lucida Console" size="12.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Consultant's Schedule">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="text_report_2" prefHeight="391.0" prefWidth="796.0">
+                           <font>
+                              <Font name="Lucida Console" size="12.0" />
+                           </font></TextArea>
+                        <ComboBox fx:id="combo_consultant" layoutX="90.0" layoutY="398.0" onAction="#handler_combo_consultant" prefWidth="150.0" />
+                        <Label layoutX="22.0" layoutY="402.0" prefHeight="17.0" prefWidth="68.0" text="Consultant" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Appointments per location">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="text_report_3" prefHeight="429.0" prefWidth="796.0">
+                           <font>
+                              <Font name="Lucida Console" size="12.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

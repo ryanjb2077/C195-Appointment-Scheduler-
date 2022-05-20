@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.main_menu_controller">
+   <children>
+      <ImageView fitHeight="32.0" fitWidth="125.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wgu_logo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="15.0" prefHeight="30.0" prefWidth="105.0" text="Main Menu">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="button_customer" layoutX="89.0" layoutY="80.0" mnemonicParsing="false" onAction="#handler_button_customer" prefHeight="26.0" prefWidth="160.0" text="Customer Management" />
+      <Button fx:id="button_appointment" layoutX="89.0" layoutY="131.0" mnemonicParsing="false" onAction="#handler_button_appointment" text="Appointment Management" />
+      <Button fx:id="button_reports" layoutX="89.0" layoutY="178.0" mnemonicParsing="false" onAction="#handler_button_report" prefHeight="26.0" prefWidth="160.0" text="Reports" />
+      <Button fx:id="button_view_log" layoutX="89.0" layoutY="229.0" mnemonicParsing="false" onAction="#handler_button_log" prefHeight="26.0" prefWidth="160.0" text="Open Sign In Log" />
+      <Label layoutX="118.0" layoutY="285.0" text="Current user:" />
+      <Label fx:id="label_current_user" layoutX="194.0" layoutY="285.0" prefHeight="18.0" prefWidth="82.0" text="User" />
+   </children>
+</AnchorPane>

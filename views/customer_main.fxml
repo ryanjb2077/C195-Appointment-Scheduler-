@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.251" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.customer_main_controller">
+   <children>
+      <ImageView fitHeight="32.0" fitWidth="125.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wgu_logo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="15.0" prefHeight="30.0" prefWidth="130.0" text="Customers">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_customer" layoutX="28.0" layoutY="70.0" prefHeight="354.0" prefWidth="685.0">
+        <columns>
+          <TableColumn fx:id="column_id" prefWidth="75.0" text="Customer ID">
+              <cellValueFactory><PropertyValueFactory property="id" />
+              </cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="column_name" prefWidth="112.0" text="Customer Name" >
+              <cellValueFactory><PropertyValueFactory property="name" />
+              </cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="column_address" prefWidth="133.5999755859375" text="Address" >
+                <cellValueFactory><PropertyValueFactory property="address" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="column_city" prefWidth="75.199951171875" text="City" >
+                <cellValueFactory><PropertyValueFactory property="city" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="column_country" minWidth="3.20001220703125" prefWidth="87.99993896484375" text="Country" >
+                <cellValueFactory><PropertyValueFactory property="country" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="column_postal" prefWidth="80.79998779296875" text="Postal Code" >
+                <cellValueFactory><PropertyValueFactory property="postal_code" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="column_phone" prefWidth="120.00002441406252" text="Phone Number" >
+                <cellValueFactory><PropertyValueFactory property="phone" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button fx:id="button_add" layoutX="491.0" layoutY="447.0" mnemonicParsing="false" prefHeight="6.0" prefWidth="59.0" onAction="#handler_button_add" text="Add" />
+      <Button fx:id="button_update" layoutX="568.0" layoutY="446.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="59.0" onAction="#handler_button_update" text="Update" />
+      <Button fx:id="button_delete" layoutX="646.0" layoutY="447.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="59.0" onAction="#handler_button_delete" text="Delete" />
+      <Button fx:id="button_return_main" layoutX="568.0" layoutY="23.0" mnemonicParsing="false" onAction="#handler_button_return_main" text="Return to Main Menu" />
+      <Label layoutX="292.0" layoutY="21.0" text="Current user:" />
+      <Label fx:id="label_current_user" layoutX="368.0" layoutY="21.0" prefHeight="18.0" prefWidth="82.0" text="User" />
+      <Button fx:id="button_return_appointment" layoutX="440.0" layoutY="23.0" mnemonicParsing="false" onAction="#handler_button_return_appointment" text="Appointment Menu" />
+   </children>
+</AnchorPane>

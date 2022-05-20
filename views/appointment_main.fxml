@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.appointment_main_controller">
+   <children>
+      <ImageView fitHeight="32.0" fitWidth="125.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wgu_logo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="128.0" layoutY="15.0" prefHeight="30.0" prefWidth="130.0" text="Appointments">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table_appointment" layoutX="28.0" layoutY="70.0" prefHeight="354.0" prefWidth="781.0">
+        <columns>
+          <TableColumn fx:id="column_customer_id" prefWidth="75.0" text="Customer ID" />
+
+
+          <TableColumn fx:id="column_customer_name" prefWidth="135.20001220703125" text="Customer Name" />
+            <TableColumn fx:id="column_contact" prefWidth="96.0" text="Contact" />
+            <TableColumn fx:id="column_title" prefWidth="133.0" text="Title" />
+            <TableColumn fx:id="column_type" minWidth="3.20001220703125" prefWidth="85.0" text="Type" />
+            <TableColumn fx:id="column_start" prefWidth="128.0" text="Start" />
+            <TableColumn fx:id="column_end" prefWidth="127.0" text="End" />
+        </columns>
+      </TableView>
+      <RadioButton fx:id="radio_during_month" layoutX="275.0" layoutY="480.0" mnemonicParsing="false" text="Month" onAction="#handler_radio_month" />
+      <ComboBox fx:id="combo_customer_view" layoutX="109.0" layoutY="443.0" prefHeight="26.0" prefWidth="97.0" promptText="All" onAction="#handler_combo_customer" />
+      <Label layoutX="28.0" layoutY="447.0" prefHeight="18.0" prefWidth="74.0" text="Customer(s):" />
+      <RadioButton fx:id="radio_during_week" layoutX="345.0" layoutY="480.0" mnemonicParsing="false" text="Week" onAction="#handler_radio_week" />
+      <Label layoutX="28.0" layoutY="480.0" prefHeight="18.0" prefWidth="172.0" text="View appointments during this:" />
+      <RadioButton fx:id="radio_during_eternity" layoutX="200.0" layoutY="480.0" mnemonicParsing="false" selected="true" text="Eternity" onAction="#handler_radio_eternity" />
+      <Button fx:id="button_add" layoutX="591.0" layoutY="444.0" mnemonicParsing="false" onAction="#handler_button_add" prefHeight="6.0" prefWidth="59.0" text="Add" />
+      <Button fx:id="button_update" layoutX="668.0" layoutY="443.0" mnemonicParsing="false" onAction="#handler_button_update" prefHeight="26.0" prefWidth="59.0" text="Update" />
+      <Button fx:id="button_delete" layoutX="746.0" layoutY="444.0" mnemonicParsing="false" onAction="#handler_button_delete" prefHeight="26.0" prefWidth="59.0" text="Delete" />
+      <Button fx:id="button_return_main" layoutX="676.0" layoutY="23.0" mnemonicParsing="false" onAction="#handler_button_return_main" text="Return to Main Menu" />
+      <Label layoutX="331.0" layoutY="27.0" text="Current user:" />
+      <Label fx:id="label_current_user" layoutX="407.0" layoutY="27.0" prefHeight="18.0" prefWidth="82.0" text="User" />
+      <Button fx:id="button_return_customer" layoutX="562.0" layoutY="23.0" mnemonicParsing="false" onAction="#handler_button_return_customer" text="Customer Menu" />
+   </children>
+</AnchorPane>
